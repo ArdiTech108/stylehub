@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - StyleHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i>
+            <span>StyleHub</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-shopping-bag"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+
+          <!-- Cart & User -->
+          <div class="nav-actions">
+            <a href="cart.html" class="cart-btn active" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-btn">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Your Shopping Cart</h1>
+          <p>Review your items before checkout</p>
+        </div>
+
+        <div class="cart-content">
+          <!-- Cart Items -->
+          <div class="cart-items-section">
+            <div class="cart-header">
+              <h2>Items (<span id="itemCount">0</span>)</h2>
+              <button class="clear-cart" id="clearCart">
+                <i class="fas fa-trash"></i> Clear Cart
+              </button>
+            </div>
+
+            <div class="cart-items-list" id="cartItemsList">
+              <!-- Cart items loaded by JavaScript -->
+              <div class="empty-cart-message">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some products to get started!</p>
+                <a href="products.html" class="shop-btn">
+                  <i class="fas fa-shopping-bag"></i> Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">$5.99</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax</span>
+                <span id="tax">$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="total">$0.00</span>
+              </div>
+            </div>
+
+            <!-- Shipping Options -->
+            <div class="shipping-options">
+              <h3>Shipping Method</h3>
+              <div class="option">
+                <input type="radio" id="standard" name="shipping" checked />
+                <label for="standard">
+                  <span class="option-name">Standard Shipping</span>
+                  <span class="option-details">5-7 business days</span>
+                  <span class="option-price">$5.99</span>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="express" name="shipping" />
+                <label for="express">
+                  <span class="option-name">Express Shipping</span>
+                  <span class="option-details">2-3 business days</span>
+                  <span class="option-price">$12.99</span>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="free" name="shipping" />
+                <label for="free">
+                  <span class="option-name">Free Shipping</span>
+                  <span class="option-details">Orders over $50</span>
+                  <span class="option-price">$0.00</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Promo Code -->
+            <div class="promo-code">
+              <h3>Promo Code</h3>
+              <div class="promo-input">
+                <input
+                  type="text"
+                  id="promoInput"
+                  placeholder="Enter promo code"
+                />
+                <button id="applyPromo">Apply</button>
+              </div>
+              <div class="available-promos">
+                <p>
+                  Available codes: <strong>WELCOME10</strong> (10% off),
+                  <strong>FREESHIP</strong> (free shipping)
+                </p>
+              </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <button class="checkout-btn" id="checkoutBtn">
+              <i class="fas fa-lock"></i> Proceed to Checkout
+            </button>
+
+            <div class="payment-methods">
+              <p>We accept:</p>
+              <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fas fa-credit-card"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue Shopping -->
+        <div class="continue-shopping">
+          <a href="products.html" class="continue-btn">
+            <i class="fas fa-arrow-left"></i> Continue Shopping
+          </a>
+        </div>
+
+        <!-- Recently Viewed -->
+        <div class="recently-viewed">
+          <h2>Recently Viewed</h2>
+          <div class="recent-products" id="recentProducts">
+            <!-- Recently viewed products loaded by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>StyleHub</h4>
+            <p>
+              Your one-stop shop for all your needs. Quality products, excellent
+              service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <a href="products.html?category=tools">Tools</a>
+            <a href="products.html?category=home">Home Goods</a>
+            <a href="products.html?category=tech">Technology</a>
+            <a href="products.html?category=clothing">Clothing</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 StyleHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

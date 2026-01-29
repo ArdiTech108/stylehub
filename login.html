@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - StyleHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i>
+            <span>StyleHub</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-shopping-bag"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+
+          <!-- Cart & User -->
+          <div class="nav-actions">
+            <a href="cart.html" class="cart-btn" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-btn active">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Welcome Back</h1>
+          <p>Sign in to your account</p>
+        </div>
+
+        <div class="auth-container">
+          <!-- Login Form -->
+          <div class="auth-form">
+            <div class="auth-tabs">
+              <button class="auth-tab active" data-tab="login">Login</button>
+              <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <!-- Login Tab -->
+            <div class="tab-content active" id="loginTab">
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="loginEmail">Email Address</label>
+                  <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="loginPassword">Password</label>
+                  <div class="password-input">
+                    <input
+                      type="password"
+                      id="loginPassword"
+                      placeholder="Enter your password"
+                      required
+                    />
+                    <button type="button" class="toggle-password">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="forgot-password">
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                  </div>
+                </div>
+                <div class="form-group remember-me">
+                  <input type="checkbox" id="rememberMe" />
+                  <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="auth-btn">
+                  <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+              </form>
+
+              <div class="social-login">
+                <p>Or sign in with:</p>
+                <div class="social-buttons">
+                  <button class="social-btn google">
+                    <i class="fab fa-google"></i> Google
+                  </button>
+                  <button class="social-btn facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Register Tab -->
+            <div class="tab-content" id="registerTab">
+              <form id="registerForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      placeholder="John"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="registerEmail">Email Address</label>
+                  <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="registerPassword">Password</label>
+                  <div class="password-input">
+                    <input
+                      type="password"
+                      id="registerPassword"
+                      placeholder="Create a password"
+                      required
+                    />
+                    <button type="button" class="toggle-password">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="password-requirements">
+                    <p>Password must be at least 8 characters and include:</p>
+                    <ul>
+                      <li>One uppercase letter</li>
+                      <li>One lowercase letter</li>
+                      <li>One number</li>
+                      <li>One special character</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                  />
+                </div>
+                <div class="form-group terms">
+                  <input type="checkbox" id="acceptTerms" required />
+                  <label for="acceptTerms">
+                    I agree to the <a href="#">Terms of Service</a> and
+                    <a href="#">Privacy Policy</a>
+                  </label>
+                </div>
+                <div class="form-group newsletter">
+                  <input type="checkbox" id="newsletter" checked />
+                  <label for="newsletter">
+                    Subscribe to our newsletter for updates and offers
+                  </label>
+                </div>
+                <button type="submit" class="auth-btn">
+                  <i class="fas fa-user-plus"></i> Create Account
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Auth Benefits -->
+          <div class="auth-benefits">
+            <h2>Benefits of Having an Account</h2>
+            <div class="benefits-list">
+              <div class="benefit">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>Faster Checkout</h3>
+                <p>
+                  Save your shipping and payment details for quick purchases.
+                </p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-history"></i>
+                <h3>Order History</h3>
+                <p>Track your orders and view purchase history.</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-tag"></i>
+                <h3>Exclusive Offers</h3>
+                <p>Get access to member-only discounts and promotions.</p>
+              </div>
+              <div class="benefit">
+                <i class="fas fa-heart"></i>
+                <h3>Wish Lists</h3>
+                <p>Save items for later and create multiple wish lists.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guest Checkout -->
+        <div class="guest-checkout">
+          <p>Don't want to create an account?</p>
+          <a href="checkout.html" class="guest-btn">
+            <i class="fas fa-shopping-cart"></i> Continue as Guest
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>StyleHub</h4>
+            <p>
+              Your one-stop shop for all your needs. Quality products, excellent
+              service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <a href="products.html?category=tools">Tools</a>
+            <a href="products.html?category=home">Home Goods</a>
+            <a href="products.html?category=tech">Technology</a>
+            <a href="products.html?category=clothing">Clothing</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 StyleHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

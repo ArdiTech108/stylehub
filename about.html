@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - StyleHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i>
+            <span>StyleHub</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-shopping-bag"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="active"
+                ><i class="fas fa-info-circle"></i> About</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+
+          <!-- Cart & User -->
+          <div class="nav-actions">
+            <a href="cart.html" class="cart-btn" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-btn">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>About StyleHub</h1>
+          <p>Your trusted online shopping destination</p>
+        </div>
+
+        <!-- About Content -->
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+              Founded in 2024, StyleHub began with a simple mission: to provide
+              high-quality products with exceptional customer service. What
+              started as a small online store has grown into a comprehensive
+              e-commerce platform offering thousands of products across multiple
+              categories.
+            </p>
+
+            <h2>Our Mission</h2>
+            <p>
+              We believe that everyone deserves access to quality products at
+              fair prices. Our mission is to bridge the gap between
+              manufacturers and consumers, providing a seamless shopping
+              experience that combines convenience, quality, and affordability.
+            </p>
+
+            <h2>Our Values</h2>
+            <div class="values-grid">
+              <div class="value-card">
+                <i class="fas fa-star"></i>
+                <h3>Quality First</h3>
+                <p>
+                  We carefully select every product in our catalog to ensure the
+                  highest standards.
+                </p>
+              </div>
+              <div class="value-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Trust & Security</h3>
+                <p>
+                  Your security is our priority. We use advanced encryption to
+                  protect your data.
+                </p>
+              </div>
+              <div class="value-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                  We partner with reliable shipping companies to ensure timely
+                  delivery.
+                </p>
+              </div>
+              <div class="value-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is always ready to assist you.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <h2>By The Numbers</h2>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Products</p>
+              </div>
+              <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Happy Customers</p>
+              </div>
+              <div class="stat-item">
+                <h3>50+</h3>
+                <p>Brands</p>
+              </div>
+              <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>StyleHub</h4>
+            <p>
+              Your one-stop shop for all your needs. Quality products, excellent
+              service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <a href="products.html?category=tools">Tools</a>
+            <a href="products.html?category=home">Home Goods</a>
+            <a href="products.html?category=tech">Technology</a>
+            <a href="products.html?category=clothing">Clothing</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 StyleHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

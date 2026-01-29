@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - Your Online Fashion Destination</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i>
+            <span>StyleHub</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="index.html" class="active"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-shopping-bag"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+
+          <!-- Cart & User -->
+          <div class="nav-actions">
+            <a href="cart.html" class="cart-btn" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-btn">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Discover Your Perfect Style</h1>
+          <p class="hero-subtitle">
+            Over 500 premium products for every occasion
+          </p>
+          <a href="products.html" class="hero-btn">
+            Shop Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>500+</h3>
+            <p>Products</p>
+          </div>
+          <div class="stat">
+            <h3>24/7</h3>
+            <p>Support</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Secure</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="featured-products">
+        <div class="container">
+          <h2 class="section-title">Featured Products</h2>
+          <div class="products-grid" id="featuredProducts">
+            <!-- Products loaded by JavaScript -->
+          </div>
+          <div class="view-all">
+            <a href="products.html" class="view-all-btn">
+              View All Products <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title">Shop by Category</h2>
+          <div class="categories-grid">
+            <a href="products.html?category=tools" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Tools</h3>
+              <p>Professional & DIY tools</p>
+            </a>
+            <a href="products.html?category=home" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3>Home Goods</h3>
+              <p>Furniture & accessories</p>
+            </a>
+            <a href="products.html?category=tech" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <h3>Technology</h3>
+              <p>Gadgets & electronics</p>
+            </a>
+            <a href="products.html?category=clothing" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <h3>Clothing</h3>
+              <p>Fashion & apparel</p>
+            </a>
+            <a href="products.html?category=shoes" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-shoe-prints"></i>
+              </div>
+              <h3>Shoes</h3>
+              <p>Footwear for all occasions</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>StyleHub</h4>
+            <p>
+              Your one-stop shop for all your needs. Quality products, excellent
+              service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <a href="products.html?category=tools">Tools</a>
+            <a href="products.html?category=home">Home Goods</a>
+            <a href="products.html?category=tech">Technology</a>
+            <a href="products.html?category=clothing">Clothing</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 StyleHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

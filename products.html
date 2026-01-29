@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - StyleHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i>
+            <span>StyleHub</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html" class="active"
+                ><i class="fas fa-shopping-bag"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+
+          <!-- Cart & User -->
+          <div class="nav-actions">
+            <a href="cart.html" class="cart-btn" id="cartBtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-btn">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Our Products</h1>
+          <p>Discover our wide range of premium products</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters">
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search products..."
+            />
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="category-filters">
+            <button class="filter-btn active" data-category="all">
+              All Products
+            </button>
+            <button class="filter-btn" data-category="tools">
+              <i class="fas fa-tools"></i> Tools
+            </button>
+            <button class="filter-btn" data-category="home">
+              <i class="fas fa-home"></i> Home Goods
+            </button>
+            <button class="filter-btn" data-category="tech">
+              <i class="fas fa-laptop"></i> Technology
+            </button>
+            <button class="filter-btn" data-category="clothing">
+              <i class="fas fa-tshirt"></i> Clothing
+            </button>
+            <button class="filter-btn" data-category="shoes">
+              <i class="fas fa-shoe-prints"></i> Shoes
+            </button>
+          </div>
+
+          <!-- Sort Options -->
+          <div class="sort-options">
+            <select id="sortSelect">
+              <option value="default">Sort by: Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+              <option value="rating">Rating: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Product 1 -->
+          <div class="product-card" data-category="tools">
+            <div class="product-image">
+              <i class="fas fa-tools"></i>
+              <span class="product-badge">-20%</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Tools</p>
+              <h3 class="product-title">Professional Drill Set</h3>
+              <p class="product-description">
+                Complete drill set with 24 accessories for all your DIY
+                projects.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$89.99</span>
+                <span class="original-price">$119.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="review-count">(128)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="1">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="1">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-category="home">
+            <div class="product-image">
+              <i class="fas fa-bed"></i>
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Home Goods</p>
+              <h3 class="product-title">Memory Foam Mattress</h3>
+              <p class="product-description">
+                Queen size memory foam mattress with cooling gel layer.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$599.99</span>
+                <span class="original-price">$799.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="review-count">(456)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="2">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="2">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-category="tech">
+            <div class="product-image">
+              <i class="fas fa-laptop"></i>
+              <span class="product-badge">Hot</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Technology</p>
+              <h3 class="product-title">Gaming Laptop</h3>
+              <p class="product-description">
+                High-performance gaming laptop with RTX graphics and 144Hz
+                display.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$1,299.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(89)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="3">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="3">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-category="clothing">
+            <div class="product-image">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Clothing</p>
+              <h3 class="product-title">Men's Casual Shirt</h3>
+              <p class="product-description">
+                Premium cotton casual shirt with modern fit and design.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$34.99</span>
+                <span class="original-price">$49.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(189)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="4">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="4">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-category="shoes">
+            <div class="product-image">
+              <i class="fas fa-shoe-prints"></i>
+              <span class="product-badge">-30%</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Shoes</p>
+              <h3 class="product-title">Running Shoes</h3>
+              <p class="product-description">
+                Cushioned running shoes with breathable mesh and non-slip sole.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$89.99</span>
+                <span class="original-price">$119.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="review-count">(345)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="5">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="5">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-category="tech">
+            <div class="product-image">
+              <i class="fas fa-headphones"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Technology</p>
+              <h3 class="product-title">Wireless Earbuds</h3>
+              <p class="product-description">
+                Noise cancelling wireless earbuds with 30hr battery life.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$129.99</span>
+                <span class="original-price">$179.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(456)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="6">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="6">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card" data-category="tools">
+            <div class="product-image">
+              <i class="fas fa-screwdriver"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Tools</p>
+              <h3 class="product-title">Screwdriver Set</h3>
+              <p class="product-description">
+                45-piece precision screwdriver set for electronics repair.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+                <span class="original-price">$34.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(89)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="7">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="7">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card" data-category="home">
+            <div class="product-image">
+              <i class="fas fa-couch"></i>
+              <span class="product-badge">Sale</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Home Goods</p>
+              <h3 class="product-title">Modern Sofa</h3>
+              <p class="product-description">
+                3-seater modern sofa with premium fabric and comfortable
+                cushions.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$699.99</span>
+                <span class="original-price">$899.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="review-count">(234)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="8">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="8">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="product-card" data-category="tech">
+            <div class="product-image">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Technology</p>
+              <h3 class="product-title">Smartphone Pro</h3>
+              <p class="product-description">
+                Latest smartphone with triple camera and 5G connectivity.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$899.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="review-count">(567)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="9">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="9">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div class="product-card" data-category="clothing">
+            <div class="product-image">
+              <i class="fas fa-vest"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Clothing</p>
+              <h3 class="product-title">Winter Jacket</h3>
+              <p class="product-description">
+                Waterproof winter jacket with thermal insulation.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$129.99</span>
+                <span class="original-price">$179.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(123)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="10">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="10">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 11 -->
+          <div class="product-card" data-category="shoes">
+            <div class="product-image">
+              <i class="fas fa-boot"></i>
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Shoes</p>
+              <h3 class="product-title">Leather Boots</h3>
+              <p class="product-description">
+                Genuine leather boots with rubber sole and water resistant
+                finish.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$129.99</span>
+                <span class="original-price">$179.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(189)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="11">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="11">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div class="product-card" data-category="tools">
+            <div class="product-image">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Tools</p>
+              <h3 class="product-title">Wrench Set</h3>
+              <p class="product-description">
+                Complete wrench set with 12 pieces for mechanical work.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$44.99</span>
+                <span class="original-price">$59.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(76)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="12">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="12">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 13 -->
+          <div class="product-card" data-category="home">
+            <div class="product-image">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Home Goods</p>
+              <h3 class="product-title">Smart LED Lights</h3>
+              <p class="product-description">
+                WiFi enabled LED light strips with voice control.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$49.99</span>
+                <span class="original-price">$69.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(234)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="13">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="13">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 14 -->
+          <div class="product-card" data-category="tech">
+            <div class="product-image">
+              <i class="fas fa-smartwatch"></i>
+              <span class="product-badge">Sale</span>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Technology</p>
+              <h3 class="product-title">Smart Watch</h3>
+              <p class="product-description">
+                Fitness smart watch with blood oxygen monitoring and GPS.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$249.99</span>
+                <span class="original-price">$329.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(312)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="14">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="14">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 15 -->
+          <div class="product-card" data-category="clothing">
+            <div class="product-image">
+              <i class="fas fa-hat-cowboy"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Clothing</p>
+              <h3 class="product-title">Baseball Cap</h3>
+              <p class="product-description">
+                Adjustable baseball cap with embroidered logo.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$19.99</span>
+                <span class="original-price">$29.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(345)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="15">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="15">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 16 -->
+          <div class="product-card" data-category="shoes">
+            <div class="product-image">
+              <i class="fas fa-running"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Shoes</p>
+              <h3 class="product-title">Trail Running Shoes</h3>
+              <p class="product-description">
+                Trail running shoes with aggressive tread and waterproof design.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$109.99</span>
+                <span class="original-price">$149.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="review-count">(123)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="16">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="16">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 17 -->
+          <div class="product-card" data-category="tools">
+            <div class="product-image">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Tools</p>
+              <h3 class="product-title">Hammer Set</h3>
+              <p class="product-description">
+                Set of 3 different hammers for various applications.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$29.99</span>
+                <span class="original-price">$39.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(89)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="17">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="17">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 18 -->
+          <div class="product-card" data-category="home">
+            <div class="product-image">
+              <i class="fas fa-blender"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Home Goods</p>
+              <h3 class="product-title">Stand Mixer</h3>
+              <p class="product-description">
+                Professional stand mixer with 10 speed settings.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$249.99</span>
+                <span class="original-price">$329.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="review-count">(167)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="18">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="18">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 19 -->
+          <div class="product-card" data-category="tech">
+            <div class="product-image">
+              <i class="fas fa-tablet-alt"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Technology</p>
+              <h3 class="product-title">Tablet Pro</h3>
+              <p class="product-description">
+                10-inch tablet with stylus support and 128GB storage.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$399.99</span>
+                <span class="original-price">$499.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(189)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="19">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="19">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 20 -->
+          <div class="product-card" data-category="clothing">
+            <div class="product-image">
+              <i class="fas fa-glasses"></i>
+            </div>
+            <div class="product-content">
+              <p class="product-category">Clothing</p>
+              <h3 class="product-title">Sunglasses</h3>
+              <p class="product-description">
+                UV protected sunglasses with polarized lenses.
+              </p>
+              <div class="product-price">
+                <span class="current-price">$49.99</span>
+                <span class="original-price">$69.99</span>
+              </div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span class="review-count">(278)</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-id="20">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-view" data-id="20">
+                  <i class="fas fa-eye"></i> View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="page-btn prev-btn" disabled>
+            <i class="fas fa-chevron-left"></i> Previous
+          </button>
+          <div class="page-numbers">
+            <span class="current-page">1</span> of
+            <span class="total-pages">3</span>
+          </div>
+          <button class="page-btn next-btn">
+            Next <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Product Categories Summary -->
+        <div class="categories-summary">
+          <h2>Shop by Category</h2>
+          <div class="categories-mini-grid">
+            <a href="products.html?category=tools" class="category-mini-card">
+              <i class="fas fa-tools"></i>
+              <span>Tools</span>
+            </a>
+            <a href="products.html?category=home" class="category-mini-card">
+              <i class="fas fa-home"></i>
+              <span>Home Goods</span>
+            </a>
+            <a href="products.html?category=tech" class="category-mini-card">
+              <i class="fas fa-laptop"></i>
+              <span>Technology</span>
+            </a>
+            <a
+              href="products.html?category=clothing"
+              class="category-mini-card"
+            >
+              <i class="fas fa-tshirt"></i>
+              <span>Clothing</span>
+            </a>
+            <a href="products.html?category=shoes" class="category-mini-card">
+              <i class="fas fa-shoe-prints"></i>
+              <span>Shoes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>StyleHub</h4>
+            <p>
+              Your one-stop shop for all your needs. Quality products, excellent
+              service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <a href="products.html?category=tools">Tools</a>
+            <a href="products.html?category=home">Home Goods</a>
+            <a href="products.html?category=tech">Technology</a>
+            <a href="products.html?category=clothing">Clothing</a>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 StyleHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+          <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Your cart is empty</p>
+          </div>
+        </div>
+        <div class="cart-total">
+          <p>Total: <span id="cartTotal">$0.00</span></p>
+          <button class="checkout-btn" id="checkoutBtn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
